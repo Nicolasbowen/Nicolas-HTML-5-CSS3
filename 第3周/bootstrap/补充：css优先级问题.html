@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*css优先级的 不管前后问题*/
+    /*
+    选择器的优先级的值 相对来说：谁大，谁的优先级高
+    通配符的优先级的值为0.1
+    标签选择器的优先级值为1
+    类名选择器的优先级 10
+    id选择器的优先级的值为100
+    行内属性样式 优先级值为1000
+    !important 最高优先级
+    */  
+    p{
+        color: salmon !important;
+    }
+        #pppid{
+            color: greenyellow;
+        }
+        .test{
+            color: black;
+        }
+        .test1 p{
+            color: yellow;
+        }
+        p{
+            color: red;
+        }
+        *{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="test1">
+            <p class="test" id="pppid" style="color: darkcyan;">我是p标签</p>
+        </section>
+    </main>
+</body>
+</html>

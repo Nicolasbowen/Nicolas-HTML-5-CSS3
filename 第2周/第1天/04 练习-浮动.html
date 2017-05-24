@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        footer{
+            height: 50px;
+            /*background-color: red;*/
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+            border-top: 1px solid black;
+            box-shadow: 0 0 5px gray;
+        }
+        section{
+            float: left;
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-right: 1px solid black;
+
+            box-sizing: border-box;
+
+            font-size: 30px;
+            /*文本阴影*/
+            /*text-shadow: 0 0 20px black;*/
+        }
+        section:last-of-type{
+            border-right: none;
+            
+        }
+        /*当鼠标放置(覆盖)在元素上时的样式*/
+        section:hover{
+            text-shadow: 0 0 20px black;
+        }
+    </style>
+</head>
+<body>
+    <main>页面内容.......</main>
+    <footer>
+        <section>&#x2665;</section>
+        <section>&#x2660;</section>
+        <section>&#x2666;</section>
+        <section>&#x2663;</section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--css 层叠样式表 可以美化页面 需要使用css代码来美化页面-->
+    <style>
+        /* css的注释格式  ctl + / */
+       /*在html文档中引入css代码 两种方式（这里先说一种）*/
+       /*使用style标签对 在style标签对中，写入的都应该是css代码 样式*/
+       /*选择器 （选中某些标签元素进行样式的设置）*/
+       p{/*p在这里就是一个选择器*/
+           /*在选择器后面的{}内是 样式集合  规则集合*/
+           /*演示属性：样式值*/
+            /*字体大小为 30px px 单位 像素 */
+            font-size: 30px; 
+            /*背景颜色*/
+            background-color: red;
+            /*设置字体颜色*/
+            color: blue; 
+       }
+       /*伪类选择器*/
+       p:nth-of-type(2){
+           /*选中第二个p标签*/
+           /*选中p标签的父元素的中的子元素p中的第二个*/
+           /*字体重量 设置粗细程度*/
+           /*normal bold bolder 100 200 。。。 900*/
+           font-weight: 900;
+       }
+
+       p:nth-child(2){
+           /*选中第二个p标签*/
+           /*选中p标签的父元素中的第二个子元素，如果第二个子元素是p标签
+           那么给这个标签设置样式，否则样式失效*/
+           /*设置字体类型  设置为倾斜体*/
+           font-style: italic;
+       }
+
+    </style>
+</head>
+<body>
+    <!-- html中的注释格式 ctl+/ -->
+    <!--前端  html5  CSS3 javascript
+    html5 负责网页的架构
+    CSS3负责网页样式 美化
+    javascript 负责页面交互
+    -->
+    <p>我是个段落标签p标签</p>
+    <p>我是span标签 文本标签</p>
+    <p>我是个段落标签p标签</p>
+    <span>我是span标签</span>
+</body>
+</html>

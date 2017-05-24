@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table{
+            /*给表加边框线*/
+            border: 1px solid blue;
+            /*边框-塌陷(合并) 将相邻的边框线合并为一条边框线*/
+            border-collapse: collapse;
+            /*默认值  不合并边框线  分离*/
+            /*border-collapse: separate;*/
+
+            /*
+            只有在边框线合并时，tr的边框线才能显示
+            在合并边框线时，优先等级：td》tr》table
+            */
+        }
+        tr{
+            /*border: 1px solid red;*/
+        }
+        td,th{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        table 表格标签
+        
+        tbody 表示表格的主题内容（可以省略）
+        tr 表示表格中的一行（row）
+        td 表示一行中的一列 (cell 单元格)（td必须要放在tr中，不能独立使用）
+        
+        thead 表头
+        tr 一行
+        th 表示表头中 一列 th必须要放在tr当中，不能独立使用
+
+        caption 标题 只用于table当中，表示表格的标题
+    -->
+    <table>
+        <caption>HTML课程表</caption>
+
+        <thead>
+            <tr>
+                <th>课程</th>
+                <th>课程</th>
+                <th>课程</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--(tr>td{HTML5}*3)*3-->
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            margin: 10px auto;   
+
+            position: absolute;
+            left: 0px;
+
+            opacity: 1;
+
+            display: block;
+
+            /*transform: rotate(0deg);*/
+            /*transition(过渡)*/
+            /*执行一个过渡动画，将元素状态改变的过程展示出来*/
+            /*第一个值指定需要过渡的元素的状态*/
+            /*第二个值表示 过渡动画持续的时间*/
+            /*复合属性*/
+            /*transition: transform 2s;*/
+
+            /*过渡属性  property（属性）元素需要进行过渡的样式(属性)*/
+            /*transition-property: transform;*/
+            /*默认值为all 表示过渡所有能够过渡的样式*/
+            transition-property: all;
+            /*如果需要一次过渡多个属性样式，用逗号隔开属性的名字*/
+            /*transition: transform,background-color;*/
+            /*duration（持续时间）*/
+            /*过渡动画持续的时间 不可省 单位为秒（s）*/
+            transition-duration: 4s;
+            /*动画的运动速率*/
+            /*第一种设置方式：缓动函数 ease ease-in ease-out ease-in-out linear*/
+            transition-timing-function: linear;
+            /*第二种设置方式：贝塞尔曲线*/
+            transition-timing-function: cubic-bezier(.07,1.67,.56,-0.13);
+            /*delay(延迟)*/
+            /*过渡动画延迟的时间*/
+            transition-delay: 0s;
+        }
+        section:hover{
+            /*transform: rotate(150deg);
+            background-color: red;
+            left: 100px;*/
+
+            /*opacity: 0.2;
+
+            margin: 100px auto;*/
+
+            display: none;
+        }
+
+        /*并不是所有的属性都可以过渡
+            能过渡的属性参考css88->css3中文文档->transition-property
+        */
+    </style>
+</head>
+<body>
+    
+    <!--
+        过渡动画：
+        将元素从一个状态到另一个状态的变化过程展现出来
+    -->
+    <section></section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+            border: 20px dotted blue;
+            padding: 30px;
+            background-image: url('img/bg.png');
+            background-repeat: no-repeat;
+
+            color: white;
+            /*背景图起点*/
+            /*起点(左上角的点)在边框盒子处*/
+            background-origin: border-box;
+            /*默认值*/
+            /*background-origin: padding-box;*/
+            /*起点在内容盒子处*/
+            /*background-origin: content-box;*/
+
+            /*背景图的结束点（右下角的点）*/
+            /*默认值 结束点在边框盒子处*/
+            background-clip: border-box;
+            /*结束点在内边距处*/
+            /*background-clip: padding-box;*/
+            /*结束点在内容处*/
+            /*background-clip: content-box;*/
+
+            /*background-clip决定了背景图的范围
+            结束点的范围一定要比起点的范围大或者等！
+            */
+
+            font-family: 迷你简双线体;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <section>section</section>
+</body>
+</html>

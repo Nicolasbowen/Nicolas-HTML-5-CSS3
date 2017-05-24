@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        caption{
+            font-weight: 600;
+            font-size: 30px;
+        }
+        thead{
+            background-color: green;
+        }
+        th{
+            width:  100px;
+            color: white;
+            height: 40px;
+        }
+        tr{
+            border: 2px solid black;
+        }
+        td{
+            height: 50px;
+            text-align: center;
+        }
+        tbody>tr>td:nth-of-type(5),tbody>tr>td:nth-of-type(6){
+            /*选中tbody当中的每个子元素tr，再找到每个tr中的第5个td*/
+            border-right: 1px solid green;
+        }
+        /*tbody>tr>td:nth-of-type(6){
+            border-right: 1px solid green;
+        }*/
+        tbody>tr:nth-of-type(1)>td:nth-of-type(6){
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>HTML5课程表</caption>
+        <!--thead>tr>th{周}*7-->
+        <thead>
+            <tr>
+                <th>周一</th>
+                <th>周二</th>
+                <th>周三</th>
+                <th>周四</th>
+                <th>周五</th>
+                <th>周六</th>
+                <th>周日</th>
+            </tr>
+        </thead>
+        <!--tbody>(tr>td{HTML5}*7)*3-->
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <!--合并行 合并2个-->
+                <td rowspan="2">HTML5</td>
+                <td rowspan="3">HTML5</td>
+
+                <!--
+                    rowspan 合并行
+                    colspan 合并列
+                -->
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <!--被合并-->
+                <!--<td>HTML5</td>-->
+                <!--<td>HTML5</td>-->
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <td>HTML5</td>
+                <!--<td>HTML5</td>-->
+            </tr>
+        </tbody>
+        
+    </table>
+</body>
+</html>

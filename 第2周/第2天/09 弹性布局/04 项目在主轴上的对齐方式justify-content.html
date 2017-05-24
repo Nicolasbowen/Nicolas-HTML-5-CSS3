@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+            /*将body设置为弹性布局的容器*/
+            display: flex;
+            /*主轴方向*/
+            /*flex-direction:row */
+            /*flex-direction: row-reverse*/
+            /*flex-direction: column;*/
+            /*flex-direction: column-reverse;*/
+            /*设定项目在主轴上的对齐方式*/
+            /*在主轴上起点对齐 start（开始）默认值*/
+            justify-content: flex-start;
+            /*在主轴上终点对齐 */
+            justify-content: flex-end;
+            /*在主轴上 中心对齐*/
+            justify-content: center;
+            /*在主轴上，每两个相邻元素之间的距离相等*/
+            /*项目两侧没有空间，中间项目之间空间相等*/
+            justify-content: space-between;
+            /*在主轴上，每个项目左右两边的距离都一致*/
+            /*中间的间距是外侧的间距的2倍*/
+            justify-content: space-around;
+        }
+        section{
+            border: 1px solid red;
+
+            /*flex-basis: 200px; */
+            /*order:  */
+            /*flex-grow: */
+            /*flex-shrink: */
+        }
+    </style>
+</head>
+<body>
+    <!--项目在主轴上的对齐方式 justity-content-->
+    <section>我是项目第01个项目</section>
+    <section>我是项目第02个项目</section>
+    <section>我是项目第03个项目</section>
+    <section>我是项目第04个项目</section>
+    <section>我是项目第05个项目</section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        .zhuandong{
+            /*margin: 200px auto;*/
+            position: absolute;
+            left: 200px;
+            top: 100px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            animation: rotate 2s infinite linear;
+            /*transform: rotate(30deg);*/
+            transform-origin: -50px -50px;
+        }
+        /*150 50  中心*/
+        .center{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            left: calc(150px - 25px);
+            top: calc(50px - 25px);
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <section class="zhuandong">
+
+    </section>
+
+    <section class="center"></section>
+</body>
+</html>

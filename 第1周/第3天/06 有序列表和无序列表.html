@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*ul,ol
+        含有上下外边距 含有左内边距
+        list-style 改变列表的类型
+        */
+        ul{
+            /*列表类型 ： 圆圈*/
+            /*复合属性*/
+            /*list-style: circle;*/
+            /*list-style: none;*/
+            /*列表类型的符号*/
+            /*list-style-type: circle;*/
+            /*列表符号的位置 默认outside （列表内容的外部 内边距中）*/
+            /*list-style-position: outside;*/
+            /*inside表示将列表符号放置在列表内容中*/
+            /*list-style-position: inside;*/
+            /*设置自定义的列表类型符号 url表示图片来源*/
+            /*list-style-image: url(image/leibiao.PNG);*/
+
+
+            list-style: url(image/leibiao.PNG) inside;
+            /*list-style: none;*/
+
+            border: 1px solid red;
+        }
+        ol{
+
+        }
+    </style>
+</head>
+<body>
+    <!--ul 无序列表 unorder List-->
+    <!--li列表项 （list）-->
+    <!--ul>li{列表$}*4-->
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+    </ul>
+    <!--ol 有序列表 orderList-->
+    <!--li 列表项 list-->
+    <ol>
+        <li>有序列表001</li>
+        <li>有序列表002</li>
+        <li>有序列表003</li>
+        <li>有序列表004</li>
+    </ol>
+
+</body>
+</html>

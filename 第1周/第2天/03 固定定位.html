@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        /*
+        固定定位
+        相对于窗口固定位置
+        特征：脱离的原本的布局流
+        （1.位置被占据2.尽可能的少的占用空间）
+        */
+        #nav{
+            
+            height: 50px;
+            background-color: red;
+            /*设置元素的定位方式为固定定位*/
+            position: fixed;
+            /*定位的位置 在距离顶部为0*/
+            top: 0;
+            /*设置元素的宽度为整行的宽度*/
+            /*width: 100%;*/
+
+            width: 80%;
+            /*margin: 0px auto;*/
+
+            /*
+            元素固定定位后，元素的定宽居中失效
+            如何解决？
+            */
+
+
+        }
+        #content{
+            height: 1000px;
+            background-color: gray;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="content">这里是内容区域</div>
+</body>
+</html>

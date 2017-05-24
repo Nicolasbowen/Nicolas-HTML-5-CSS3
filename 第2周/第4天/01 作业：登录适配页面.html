@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .avatar{
+            width: 20vh;
+            height: 20vh;
+            border-radius: 50%;
+            background-image: url(img/img.jpg);
+            background-size: cover;
+            background-position: center;
+            margin-top: 4vh;
+        }
+        form{
+            margin-top: 4vh;
+        }
+        input[type='text'],input[type='password']{
+            border: none;
+            background-color: transparent;  
+        }
+        form>div:nth-of-type(-n+2){
+            border-bottom: 1px solid black;
+        }
+        input[type='submit']{
+            border: none;
+            background-color: green;
+            width: 100%;
+            color: white;
+        }
+        form>div{
+            padding-top: 2vh;
+
+        }
+        /* 宽高比> 1 */
+        @media (min-aspect-ratio: 1 / 1){
+            .avatar{
+                width: 30vh;
+                height: 30vh;
+            }
+            body>section:last-of-type{
+                width: 60vw;
+            }
+            .forget{
+                float: left;
+            }
+            .register{
+                float: right;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <section class="avatar"></section>
+    <form action="">
+        <div>
+            <!--label文本标签for属性的值为某个input的id，
+            当点击了标签之后，对应的input会获取焦点-->
+            <label for="username">用户名：</label>
+            <!--name属性，在提交表单时要使用-->
+            <input type="text" id="username" name="username22" placeholder="请输入用户名">
+        </div>
+        <div>
+            <label for="password">密&#x3000;码：</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码">
+        </div>
+        <div>
+            <!--submit(提交) 使input成为一个提交按钮-->
+            <input type="submit" value="提交">
+        </div>
+    </form>
+
+    <section>
+        <p class="forget">忘记密码？</p>
+        <p class="register">注册新用户</p>
+    </section>
+ 
+</body>
+</html>

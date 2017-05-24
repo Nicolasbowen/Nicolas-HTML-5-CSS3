@@ -1,0 +1,30 @@
+.sp{
+    width: 7vw;
+    height: 7vw;
+    background-image: url(images/common/spr1.png);
+    background-size: 100% 800%;
+}
+.classifySelected{
+
+}
+.classify{
+    background-position: 0 -100%;
+}
+.shopSelected{
+    background-position: 0 -200%;
+}
+.shop{
+    background-position: 0 -300%;
+}
+.mySelected{
+    background-position: 0 -400%;
+}
+.my{
+    background-position: 0 -500%;
+}
+.homeSelected{
+    background-position: 0 -600%;
+}
+.home{
+    background-position: 0 -700%;
+}

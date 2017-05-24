@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            /*flex-direction: row;*/
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        section{
+            border: 1px solid red;
+        }
+        section:nth-of-type(4){
+            /*某个项目在交叉轴上的对齐方式 他的值会覆盖align-items的值*/
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: center;
+            align-self: baseline;
+            align-self: stretch;
+            /*默认值 表示继承父元素的align-item的属性*/
+            align-self: auto;
+        }
+        section:nth-of-type(3){
+            align-self: baseline;
+        }
+    </style>
+</head>
+<body>
+    <section>我是项目1</section>
+    <section>我是项目2</section>
+    <section style="font-size: 40px;">我是项目3</section>
+    <section style="font-size: 30px;">我是项目4</section>
+</body>
+</html>

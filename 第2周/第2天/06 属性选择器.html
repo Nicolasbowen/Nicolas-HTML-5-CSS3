@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*css样式*/
+        p{
+            font-size: 30px;
+        }
+        /*选中含有title属性的a标签*/
+        a[title]{
+            /*color: red;*/
+        }
+        /*选中含有href属性和title属性的a标签*/
+        a[href][title]{
+            /*color: red;*/
+        }
+        /*选中含有title属性，且title属性值为‘baidu’的a标签*/
+        a[title='baidu']{
+            /*color: red;*/
+        }
+        a[title='baidu'][href]{
+            /*color: red;*/
+        }
+        /*选中含有title属性，且title属性值含有‘baidu’这个字符的a标签*/
+        a[title *= 'baidu']{
+            /*color: red;*/
+        }
+        /*选中含有title属性，且title属性值以‘baidu’这个字符开头的a标签*/
+        a[title ^= 'baidu']{
+            /*color: red;*/
+        }
+        /*选中含有title属性，且title属性值以‘baidu’这个字符作为结尾的a标签*/
+        a[title $= 'baidu']{
+            color: red;
+        }
+        /*a:nth-last-child()*/
+
+        /*
+        a[title] 包含
+        a[title = 'aa'] 是
+        a[title *= 'aa'] 含有
+        a[title ^= 'aa'] 开头
+        a[title $= 'aa'] 结尾
+        */
+
+        
+
+    </style>
+</head>
+<body>
+    <!--写在标签内的 叫做标签的属性-->
+    <!--style属性 表示标签的行内样式-->
+    <!--行内样式的优先级>CSS样式的优先级-->
+    <p style="font-size: 40px;background-color: red">pppp</p>
+    <!--<figure>
+        <figcaption></figcaption>
+        <figcaption lang="en"></figcaption>
+    </figure>-->
+
+    <a href="#" title="4444444baidu">百度一下</a>
+    <a href="#" title="baidu2">百度一下</a>
+    <a href="#" title="baidu244444">百度一下</a>
+    <a href="#" title="bai333du">百度一下</a>
+
+</body>
+</html>
+
+
+<!--
+    伪类选择器
+    :nth-of-type(n) 正数第n个
+    :last-of-type 正数最后一个
+    :first-of-type 正数第一个
+    :nth-last-of-type(n) 倒数第n个
+    
+    :nth-child(n+1)  正数
+    :last-child
+    :first-child
+    :nth-last-child(n) 倒数
+
+    伪元素选择器
+    ::before ::after
+    ::first-line ::first-letter
+
+
+-->
+<style>
+    p::first-letter{
+        font-size: 30px;
+        color: red;
+    }
+    p::first-line{
+        font-style: italic;
+    }
+</style>
+<p>我是p标签我是p标签我是p标签我是p标签</p>

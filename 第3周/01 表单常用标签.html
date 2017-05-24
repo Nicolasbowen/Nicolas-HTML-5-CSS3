@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #skill3{
+            resize: both;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name='myname' placeholder="请输入用户名" required></input>
+        </div>
+        <div>
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码">
+        </div>
+
+        <!--实现一个单选 name值保持一致，只是表示的一个字段-->
+        <!--checked checked='checked' 规定页面加载时被预先选中的input元素-->
+        <div>
+            <input type="radio" id="nan" name="sex" checked>
+            <label for="nan">男</label>
+            <input type="radio" id="nv" name="sex">
+            <label for="nv">女</label>
+        </div>
+
+        <!--实现一个多选 name值保持一致-->
+        <div>
+            <input type="checkbox" id="css" name="kecheng" checked>
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="kecheng" checked="checked">
+            <label for="js">JS</label>
+            <input type="checkbox" id="html" name="kecheng">
+            <label for="html">HTML</label>
+        </div>
+
+        <fieldset>
+            <legend>标题</legend>
+            <input type="checkbox" id="css" name="kecheng" checked>
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="kecheng" checked="checked">
+            <label for="js">JS</label>
+            <input type="checkbox" id="html" name="kecheng">
+            <label for="html">HTML</label>
+        </fieldset>
+
+        <!--选择列表select(选择)-->
+        <!--
+            用于创建多选或单选列表 
+            option表示选择列表的选项
+            selected 表示选择列表中的默认选项
+        -->
+        <select name="skill" id="skill">
+            <option value="1">击飞</option>
+            <option value="2" selected>过河拆桥</option>
+            <option value="3">万箭齐发</option>
+        </select>
+
+        <!--在选择列表中设置多个组-->
+        <select name="skill2" id="skill2">
+            <optgroup label="lol">
+                <option value="1">击飞</option>
+            </optgroup>
+            <optgroup label="三国杀">
+                <option value="2">过河拆桥</option>
+                <option value="3" selected>万箭齐发</option>
+            </optgroup>
+        </select>
+
+        <!--多选的选择列表 multiple表示此选择列表为多选列表-->
+        <select name="skill3" id="skill3" multiple>
+            <optgroup label="lol">
+                <option value="1">击飞</option>
+            </optgroup>
+            <optgroup label="三国杀">
+                <option value="2">过河拆桥</option>
+                <option value="3" selected>万箭齐发</option>
+            </optgroup> 
+        </select>
+
+        <!--textarea 定义多行文本输入控件，cols和rows属性表示控件的尺寸
+            但是我们通过不通过这种方式来设置大小，而是使用width和height样式来设置
+        -->
+        <textarea name="" id="" cols="30" rows="10">
+            我是文本区域
+        </textarea>
+
+        <div>
+            <!--input text password radio checkbox -->
+            <!--提交表单数据 要刷新页面-->
+            <input type="submit" value="提交">
+            <!--重置表单当中的数据-->
+            <input type="reset" value="重置">
+            <!--选中上传文件-->
+            <input type="file" required>
+            <!--邮箱输入框-->
+            <input type="email">
+            <!--<input type="image">  img-->
+
+
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            /*border: 10px solid blue;*/
+            /*方式1：手动设置父元素的高度*/
+            /*height: 10px;*/
+
+            /*方式2：在父元素中使用overflow:hidden*/
+            /*overflow: hidden;*/
+        }
+        section>div{
+            border: 1px solid red;
+        }
+        section>div:nth-of-type(1){
+            float: left;
+        }
+        section>div:nth-of-type(2){
+            float: left;
+        }
+        /*
+        当内部的子元素浮动后（脱离布局流后），父元素的高度就不能
+        被这些元素撑开，就发生了父元素塌陷问题
+        清除浮动后的影响
+        1.手动设置父元素的高度（不推荐使用高度不容易把控）
+        2.在父元素当中使用overflow:hidden （推荐使用）
+        3.在父元素的后面添加内容，清除浮动
+        4.在父元素的下一个同胞元素中使用clear：both
+          解决位置重叠问题，但是父元素依然塌陷
+        */
+        /*方式3:*/
+        /*section::after{*/
+            /*content: "";*/
+            /*设置为块元素*/
+            /*display: block;*/
+            /*清除浮动*/
+            /*clear: both;*/
+        /*}*/
+
+        /*方式4：父元素的下一个同胞元素中使用clear：both*/
+        /*main{
+            clear: both;
+        }*/
+
+        /*方式5：在父元素的下一个中添加一个空的div，清除浮动*/
+        .clearfix{
+            width: 0;
+            clear: both;
+        }
+
+        main{
+            border: 2px solid palegreen;
+        }
+    </style>
+</head>
+<body>
+    <!--section>div{第$个div}*2-->
+    <section>
+        <div>第001个div</div>
+        <div>第002个div</div>
+    </section>
+    <div class="clearfix"></div>
+    <main>我是main标签</main>
+</body>
+</html>

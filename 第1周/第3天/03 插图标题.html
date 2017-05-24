@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        figure{
+            text-align: center;
+        }
+        figcaption[lang='en']{
+            /*选中含有lang属性，且lang属性为en的figcaption标签*/
+        }
+        figcaption[lang]{
+            /*选中含有lang属性的figcaption标签*/
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!--caption 标题-->
+    <!--figure规定一个独立的流内容（图像，图标，照片等）-->
+    <!--figcaption 只用于figure中，定义流内容的标题-->
+    <figure>
+        <img src="image/lry.jpg" alt="刘若英近照">
+        <figcaption>刘若英</figcaption>
+        <figcaption lang="en">liuruoying</figcaption>
+    </figure>
+
+    <figure>
+        <img src="image/lry.jpg" alt="刘若英近照">
+        <figcaption>刘若英</figcaption>
+        <figcaption lang="en">liuruoying</figcaption>
+    </figure>
+
+    <figure>
+        <img src="image/lry.jpg" alt="刘若英近照">
+        <figcaption>刘若英</figcaption>
+        <figcaption lang="en">liuruoying</figcaption>
+    </figure>
+</body>
+</html>

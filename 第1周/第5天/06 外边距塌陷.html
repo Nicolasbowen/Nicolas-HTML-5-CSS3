@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        section:nth-of-type(1){
+            margin-bottom: 130px;
+        }
+        section:nth-of-type(2){
+            margin-top: 50px;
+        }
+        /*外边距塌陷：
+          当两个同级元素的上下外边距相遇时，
+          两者之间的距离并不是两个外边距的和，
+          而是较大的那个外边距的值
+        */
+
+        div{
+            /*设置div为行内块元素  
+            行内块元素的特征:既可以设置大小，又可以横向排列  */
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+        div:nth-of-type(1){
+            margin-right: 20px;
+
+        }
+        div:nth-of-type(2){
+            margin-left: 100px;
+        }
+
+
+        /*
+        外边距塌陷发生在同级的块级元素上下外边距中
+        */
+
+    </style>
+</head>
+<body>
+    <section></section>
+    <section></section>
+
+    <main>
+        <!--div两个div被转换为行内元素后，两者在显示时，
+        之间会有空格，这个空格来自两个标签之间的回车-->
+        <!--<div></div>
+        <div></div>-->
+
+        <!--如果没有回车，显示时就不会有空格-->
+        <div></div><div></div>
+    </main>
+</body>
+</html>

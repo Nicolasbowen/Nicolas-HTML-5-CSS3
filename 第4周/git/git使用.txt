@@ -1,0 +1,84 @@
+﻿
+git的使用  （本地仓库）
+1 建立一个文件夹，作为git仓库   
+    右击使用git bash here 打开
+   键入命令git init 那么这个文件夹就是一个git仓库
+2 配置用户信息
+   git config --global user.name '名字'
+   git config --global user.email '邮箱'
+3 在本地新建文件并提交到仓库
+    git add 文件名  将新建的文件添加到缓存区
+    git status 列举当前目录所有的没有被git管理或者被添加在缓存器，但是还没有被提交的文件
+    git commit -m '提交的备注信息' 提交缓存区的内容
+    git log 输出提交的历史
+    git log --oneline 将提交信息压缩到一行
+4 
+   git add . 把所有修改的新增的文件添加到缓存区
+   git commit -m "新增了样式"
+   git log -n 2 限制只输入最近2条提交历史
+   git log --author='用户名' 过滤某个作者的提交历史
+   git show 提交id  查看某次提交的具体内容
+
+5 git撤销（缓存区内容回退）
+  git diff 展示缓存区和工作区的不同
+  git checkout 文件名字 将缓存区的内容给撤销回来到工作区
+
+6.版本回退（git库/版本存放区 回退） 
+  git log --oneline
+  git reset --hard 提交id  
+  回退后，再次使用log 打印提交信息，被回退掉的提交将不会显示
+  git reflog 打印所有的分支上的所有的commit 和 reset
+
+7.分支
+  master代表主分支
+  git branch 分支名字   新建一个分支
+  git branch           查看所有的分支 （*就代表当前分支）
+  git checkout 分支名字 切换到某个分支
+  合并分支：
+  进入主分支git checkout master
+  合并分支 git merge 分支名字
+
+  解决分支合并时的冲突
+  1）git checkout aBranch
+  2）建立文件pay.html，add,commit
+  3)git checkout master 
+  4)在主分支上建立文件pay.html  add commit
+  5）git merge aBranch 这时就发生了冲突
+  6）在冲突的地方（pay.html这个文件中），保留一份内容，进行add commit
+     HEAD 表示当前分支 始终指向当前的分支
+     <<<<<<<HEAD
+         主分支内容
+     =======
+          其他分支内容
+     >>>>>>> aBranch
+
+
+远程仓库
+
+http://git.oschina.net/  注册账号
+
+1.生成ssh公钥
+2.建立仓库 项目
+3.将项目复制到本地 
+  复制ssh地址  在git使用git clone ssh地址
+4.在本地仓库中完成项目并提交 
+然后使用命令git push将本地仓库的内容推送到远程仓库，
+以达到同步的目的（使用此命令时，git目录要在项目文件夹下）
+5.在远程仓库当中修改内容并提交
+  git pull 将远程仓库中的内容拉取到本地仓库
+在开始工作之前，你首选需要将远程仓库中的内容拉去到本地，然后再工作
+
+开源项目 共有项目
+fork pullRequest
+fork 我可以参与别人的开源项目的开发（需要参数哪个开源项目的开发，就fork哪个项目）
+fork时，实际上将别人的开源代码复制到自己的远程库中
+一旦到自己的远程，我们就可以将他复制到本地进行开发，完成之后再上传到自己的远程库
+那么：如果需要将自己完成内容合并到开源项目中，则需要使用pullRequest功能 
+发送pullRequest之后，就可以等待原作者审核，原作者可以接受可以不接受
+
+
+
+
+
+
+

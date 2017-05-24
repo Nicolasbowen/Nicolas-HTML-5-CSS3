@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+            /*添加一个透明边框 宽度为15像素*/
+            /*设置自定义边框时，这行是必须的，要设定边框的宽度宽度及透明*/
+            border: 15px solid transparent;
+
+            border-image: url(img/border.png) 30 30 stretch;
+
+        }
+
+        div{
+            width: 300px;
+            height: 300px;
+            
+            border: 27px solid transparent;
+            /*边框图片来源 url  边框图片的地址*/
+            border-image-source: url("img/border.png");
+            /*边框图片切片*/
+            /*对图片处理时，首先将图片用4刀分割为9个区域，
+            四个角区域保持不变，其他区域进行处理*/
+            /*slice四个值就表示切刀的位置
+            第一个值表示刀片距上的位置
+            第二个值表示刀片距右的位置
+            第三个值表示刀片距下的位置
+            第四个值表示刀片距左的位置
+            */
+            border-image-slice: 27 27 27 27;
+            /*边框图片宽度 倍数 边框图片宽度的倍数*/
+            border-image-width: 1 1 1 1;
+            /*边框图片向外扩展 不支持负值 并不影响元素本身 
+            也不会当前布局产生影响*/
+            border-image-outset: 0 0 0 0;
+            /*边框图片重复*/
+            /*stretch 拉伸 repeat 重复 round 平铺*/
+            /*第一个值表示上下 第二个值表示左右*/
+            border-image-repeat: stretch round;
+        }
+    </style>
+</head>
+<body>
+    <!--<section>
+
+    </section>-->
+
+    <div>我是div我是div我是div我是div我是div</div>
+
+</body>
+</html>

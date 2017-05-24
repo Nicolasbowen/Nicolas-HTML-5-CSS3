@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*
+    1.默认情况下，body的高度为0，（body没有内容的时候）
+    但是不管高度为 多少，设置body的背景颜色时，
+    总是充满浏览器的内容的整个区域
+
+    2.盒模型
+      内容区域 内边距 边框 外边距
+      body默认有8个像素的外边距
+      （很多元素都有默认的外边距 p h1 h2.....）
+    3.body的高度 （设置高度为整个浏览器的高度）
+      同时设置html和body的height为100%
+    */
+        html,body{
+            height: 100%;
+        }
+        html{
+            /*height: 100%;*/
+        }
+        body{
+            /*background-color: red;*/
+            /*相对单位 此标签的父标签的高度的100%*/
+            /*height: 100%;*/
+        }
+        p{
+            background-color: yellow;
+            /*设置标签的高度*/
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    ssssss
+    <p></p>
+</body>
+</html>

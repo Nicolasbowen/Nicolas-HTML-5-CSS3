@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            margin: 0; 
+        }
+        /*************导航**************/
+        #nav{
+            /*设置视图层次 */
+            z-index: 10;
+            /*当设置元素的内边距时，内边距会把元素本身的大小撑开*/
+            /*元素现有的大小= width样式的值 + padding的值*/
+            /*盒子大小：边框大小*/
+            /*盒子的大小在设置内边距时不会被撑大*/
+            box-sizing: border-box;
+
+            position: fixed;
+            top: 0;
+
+            width: 100%;
+            background-color: white;
+
+            /*元素的内边距 使用方式跟margin一致*/
+            /*padding: 20px;*/
+            padding: 10px 10px;
+            /*padding-top: 10px;*/
+            /*padding-left: */
+            /*padding-right: */
+            /*padding-bottom: */
+            /*
+            四个值  上 右  下  左
+            三个值 上  左右 下
+            二个值 上下 左右
+            一个值 上下左右
+            */
+
+            height: 70px;
+            /*盒子 阴影*/
+            box-shadow: 0 0 10px gray;
+
+            /*设置最小宽度 导航的宽度会随着浏览器的宽度的变化而变化
+              当浏览器窗口变小时小于600px,使导航的宽度不再减少
+            */
+            min-width: 600px;
+            
+        }
+        #nav>img{
+            /*img设置大小时，只需设置宽度或者高度，那么另一边会随着变化
+                保证图片等比例缩放
+            */
+            height: 50px;
+        }
+        /*空格 子孙选择器*/
+        #nav a{
+            /*查找#nav中的所有的子孙元素a*/
+            /*文本装饰  none不加装饰 取消装饰线 */
+            text-decoration: none;
+            /*加装饰线  下划线*/
+            /*text-decoration: underline*/
+            /*加装饰线 横穿线*/
+            /*text-decoration: line-through*/
+
+        }
+        #nav>span{
+            /*浮动到右侧*/
+            float: right;
+            /*转换为块级元素 
+            目的：span本身是行内元素，width，height样式对其无效*/
+            /*将展示方式设置为块级元素 ，那么就可以对span进行高度的设置*/
+            display: block;
+            
+            height: 50px;
+            line-height: 50px;
+            
+        }
+
+        section{
+            /*展示 none隐藏元素*/
+            display: none;
+
+            width: 100px;
+            height: 20px;
+            border: 1px solid red;
+            margin: 100px auto;
+            /*盒子阴影*/
+            /*第一个值表示左右阴影（正值为右阴影 负值为左阴影）
+              第二个值表示上下阴影 (正值为下阴影 负值为上阴影)
+              第三个值表示阴影的模糊度
+              第四个值表示阴影的颜色
+            */
+            box-shadow: 0px -10px 20px red;
+        }
+
+        /*************头部**************/
+        #header{
+            margin-top: 70px;
+        }
+        #header img{
+            width: 100%;
+        }
+        #header p{
+            /*视口宽度  窗口宽度的80%*/
+            width: 75vw;
+        }
+        #header>p,#content>div>p{
+            text-indent: 2em;
+            margin: 10px auto;
+        }
+        /*:before  在选中元素的前面加内容*/
+        /*伪元素选择器*/
+        #header>p::before,#content>div>p::before{
+            /*要添加内容*/
+            content: '“';
+            /*字体大小*/
+            font-size: 30px;
+            /*字体类型 字体集*/
+            font-family: 宋体;
+        }
+        /*伪元素选择器 在选中的元素的后面加内容*/
+        #header>p::after,#content>div>p::after{
+            content: "”";
+            font-size: 30px;
+            font-family: 宋体;
+        }
+
+        /*************内容部分**************/
+        #content{
+            /*w80% + Tab*/
+            width: 75vw;
+            margin: 0 auto;
+        }
+        #content img{
+            width: 100%;
+        }
+        h2{
+            /*设置左边框线*/
+            border-left: 10px solid orange;
+            color: orange;
+            
+            /*设置下外边距*/
+            margin-bottom: 2px;
+            padding-left: 5px;
+        }
+
+        hr{
+            width: 90%;
+            /*height: 20px;*/
+            /*取消边框线*/
+            border: none;
+            border-top: 1px solid red;
+            
+
+        }
+
+        #footer{
+            text-align: center;
+        }
+/*
+w/h = 1024/653
+*/
+        #classmate>div{
+            /*1025 653*/
+            width: 75vw;
+            /*calc 函数 cSS中的函数 可以进行计算得到一个值*/
+            height: calc(75vw * 653 / 1024);
+            /*height:480px;*/
+                
+            /*设置容器的div的背景图*/
+            background-image: url(img/classmates.jpg);
+            /*设置背景图的尺寸*/
+            background-size: 100% auto;
+        }
+        #classmate>div{
+            position: relative;
+        }
+        #classmate img{
+            border-radius: 50%;
+            position: absolute;
+        }
+        #classmate img:nth-of-type(1){
+            /*父元素的宽度的10%*/
+            /*width: 10%;*/
+            /*父元素的高度的10%*/
+            /*height: 10%*/
+
+            /*窗口宽度的10%*/
+            width: 10vw;
+            /*窗口宽度的10%*/
+            height: 10vw;
+            /*相对于容器的百分比 把元素的左上角作为定位点*/
+            /*定位元素的左上角在容器中坐标位置*/
+            top: 50%;
+            left: 20%;
+        }
+        #classmate img:nth-of-type(2){
+            width: 20vw;
+            height: 20vw;
+            /*display: none;*/
+            top: 100px;
+            left: 100px;
+        }
+        #classmate img:nth-of-type(3){
+            width: 15vw;
+            height: 15vw;
+            display: none;
+
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!--导航部分-->
+    <div id="nav">
+        <img src="img/logo.png" alt="智游logo">
+        <span>
+            <!--a[href='#']{首页}*6-->
+            <a href="#">首页</a>
+            <a href="#html5">HTML5</a>
+            <a href="#classmate">我的同学</a>
+            <a href="#hometown">我的家乡</a>
+            <a href="#">我的学校</a>
+            <a href="#">关于我</a>
+        </span>
+    </div>
+
+    <section></section>
+
+    <!--头部-->
+    <div id="header">
+        <img src="img/header.jpg" alt="头部图片">
+        <p>
+            学好一门技术的唯一方法是使用它，在使用它的过程中才能真正学会它。 如果能够在使用它的过程中体会到乐趣，就是学习的最佳状态。希望大家在学习HTML5的过程中多多练习，多敲代码一定会有回报，意想不到的收获都会在使用的过程中迸发出来。
+        </p>
+    </div>
+
+    <!--内容部分-->
+    <div id="content">
+        <!--html5-->
+        <div id="html5">
+            <h2>HTML5</h2>
+            <img src="img/html5.jpg" alt="">
+            <p>
+                从小就喜欢学习，感觉自己的自学能力超强，也喜欢把自己学会的知识分享给大家。我希望自己能够成为一个好老师，把每一个同学都教好，让他们都能有所成就。我认为一个好老师不仅要有较好的技术，也要对学生严格要求。放任不管只有部分同学能安心学习，严格要求才能保证绝大多数同学都能稳下心来好好学习
+            </p>
+        </div>
+        <!--我的同学-->
+        <div id="classmate">
+            <h2>我的同学</h2>
+            <!--<img src="img/classmates.jpg" alt="">-->
+            <div>
+                <img src="img/lry.jpg" alt="">
+                <img src="img/ldh.jpg" alt="">
+                <img src="img/wf.png" alt="">
+            </div>
+            <p>
+                从小就喜欢学习，感觉自己的自学能力超强
+            </p>
+        </div>
+        <!--我家乡-->
+        <div id="hometown">
+            <h2>我的家乡</h2>
+            <img src="img/hometown.jpg" alt="">
+            <p>
+                从小就喜欢学习，感觉自己的自学能力超强，也喜欢把自己学会的知识分享给大家。我希望自己能够成为一个好老师，把每一个同学都教好，让他们都能有所成就。我认为一个好老师不仅要有较好的技术，也要对学生严格要求。放任不管只有部分同学能安心学习，严格要求才能保证绝大多数同学都能稳下心来好好学习
+            </p>
+        </div>
+    </div>
+
+    <!--表示横线-->
+    <hr>
+    <!--底部-->
+    <div id="footer">
+        &#xa9;2016&#x3000;智游教育&#x3000;版权所有&#x3000;&#x3000;&#x3000;0371-123456789&#x3000;&#x3000;&#x3000;郑州市经开区河南通信产业园6楼605
+    </div>
+    <br>
+</body>
+
+</html>

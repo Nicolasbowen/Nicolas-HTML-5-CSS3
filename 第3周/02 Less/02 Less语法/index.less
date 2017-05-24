@@ -1,0 +1,195 @@
+
+/****************变量**********************/
+// 可变的量 （变量值可以存储一个数据，当需要使用数据时，使用变量）
+@color:blue;
+p{
+    text-align: center;
+    color: @color;
+}
+section{
+    color: @color;
+}
+// @color 变量被重新赋值 ，那么对于全局的color变量记录的值都会发生改变
+@color:red;
+
+
+//全局的
+@font-size:30px;
+p{
+    // 局部的
+    @font-size:20px;
+    //局部的优先使用
+    font-size: @font-size;
+    @font-size:10px;
+    
+}
+
+// 使用一个变量来定义另一个变量的内容
+// 字符串
+@aa:"sskfjasfdjasfkasfjij";
+@bb:"aa";
+p:after{
+    content: @@bb;
+    // content: @bb;
+}
+
+/*******************混合************************/ 
+// 在一个规则集当中引用另一个规则集
+
+.border {
+    border-top: 1px solid red;
+    border-bottom: 2px solid blue;
+}
+#style{
+    font-style: italic;
+}
+p{
+    // 引用已经定义好的规则集（样式集）
+    .border;
+    #style;
+}
+section{
+    .border;
+    #style;
+}
+
+// 混合当中使用选择器
+
+.underline{
+    color: orange;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+div{
+    .underline;
+}
+
+// 5*5*Π
+// 10*10*Π
+// 封装 造 写 一个函数 完成一个功能  能够计算圆的面积
+// {【5*5*π】}
+// {10*10*π}
+// 参数：变量（可以记录一个值，保存一个值）参数变量 参数
+
+// {参数*参数*π}
+
+// 使用函数 调用函数 使用这个功能
+// // 传入参数值 
+// 函数（参数值）;
+// 带参数的混合
+
+// 函数  可以在多个地方使用 减少重复性的代码
+
+//@width 变量 （可以保存一个值） 此时作为参数来使用 可以叫做参数 参数变量
+// 带参数表示在使用这个规则集时，需要指定参数的值
+.borders(@width){
+    border-left: @width solid red;
+    border-right: @width double blue;
+}
+
+// 指定一个默认值
+.radius(@radius:5px){
+    border-radius: @radius;
+}
+
+div{
+    .borders(5px);
+
+    //使用默认的参数
+    .radius;
+}
+
+p{
+    .borders(10px);
+
+    // 指定一个参数值
+    .radius(20px);
+}
+
+.shadow(@x:0px;@y:0px;@blur:5px;@color:#00F){
+    // box-shadow: @x @y @blur @color;
+    box-shadow: @arguments;
+}
+
+div{
+    // .shadow;
+
+    .shadow(10px,20px,10px,red);
+}
+
+/***************嵌套*******************/ 
+header{
+    background-color: red;
+    h1{
+        text-align: center;
+    }
+    address{
+        color: yellow;
+        strong{
+            font-style: normal;
+
+            &:before{
+                content: "作者：";
+            }
+        }
+        span{
+            border-bottom: 1px dotted gray;
+        }
+
+    }
+}
+
+// body{
+//     @media (min-width:300px){
+//         background-color: red;
+
+//         @media (min-width:500px){
+//             font-size: 60px;
+//         }
+//     }
+// }
+
+
+/****************扩展********************/
+
+main{
+    
+    margin:  30px auto;
+    height: 300px;
+    // 扩展时，这个border样式不能加()
+    // 本质就是使用了.border当中的样式
+    &:extend(.border);
+
+}
+
+.test{
+    color: red;
+}
+// 扩展的另一种写法
+main:extend(.test){
+    
+    font-size: 40px;
+}
+
+/************函数*************/
+
+main{
+    color: red;
+    color: #FF0;
+    color: color("#FF0");
+    color: color("red");
+
+    background-image: url(1.jpg);
+    // background-size: image-size("1.jpg");
+    background-repeat: no-repeat;
+
+    width: image-width("1.jpg");
+    height: image-height("1.jpg");
+
+    border: ceil(23.5px) solid red;
+
+}
+
+

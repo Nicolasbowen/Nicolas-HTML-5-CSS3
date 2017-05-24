@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            /*flex-direction: row-reverse;*/
+            /*flex-direction: column;*/
+            /*flex-direction: column-reverse;*/
+            /*定义项目的换行方式*/
+            /*不换行 默认值*/
+            /*flex-wrap: nowrap;*/
+            /*换行 （正的顺序）
+            主轴为水平方向时，交叉轴的方向 从上到下；
+            主轴为竖直方向时，交叉轴的方向 从左到右；
+            */
+            flex-wrap: wrap;
+
+            /*换行 （逆的顺序）
+            主轴为水平方向时，交叉轴的方向为 从下到上
+            主轴为竖直方向时，交叉轴的方向为 从右到左
+            
+            */
+            /*flex-wrap: wrap-reverse;*/
+
+
+            
+
+            /*换行后，就出现了多根主轴线*/
+            /*多根主轴线在交叉轴上的对齐方式*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            /*在主轴线上的项目的两侧之间的间距一致*/
+            align-content: space-around;
+            /*在相邻主轴线上的项目的之间的间隔一致 外侧间距是内侧间距的一半*/
+            align-content: space-between;
+            /*主轴线上的项目在交叉轴上尽可能的伸展*/
+            align-content: stretch;
+            /*
+            align-items表示单行时，元素的交叉轴上的对齐方式
+            而align-content表示多行时，多个主轴线在交叉轴上的对齐方式
+            两者不要同时使用
+            */
+        }
+        section{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section>项目01</section>
+    <section>项目02</section>
+    <section>项目03</section>
+    <section>项目04</section>
+    <section>项目05</section>
+    <section>项目06</section>
+    <section>项目07</section>
+    <section>项目08</section>
+    <section>项目09</section>
+    <section>项目10</section>
+    <section>项目11</section>
+    <section>项目12</section>
+    <section>项目13</section>
+    <section>项目14</section>
+    <section>项目15</section>
+    <section>项目16</section>
+    <section>项目17</section>
+    <section>项目18</section>
+    <section>项目19</section>
+    <section>项目20</section>
+</body>
+</html>

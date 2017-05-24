@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 300px;
+            border: 1px solid red;
+
+            /*内边距：元素内容距离元素的边框之间的间距*/
+            /*1.设置方式  不支持负值*/
+            padding: 20px;
+            padding: 10px 20px 30px 40px;
+            /*
+            四个值：上 右  下 左
+            三个值： 上 左右 下
+            两个值：上下 左右
+            一个值： 上下左右
+            */
+            /*padding-left: */
+            /*padding-top: */
+            /*padding-bottom: */
+            /*padding-right: */
+
+
+            /*2.内边距对元素大小的影响*/
+            /*在默认情况下，内边距向外扩张，会使元素变大 大于宽度和高度样式指定的大小*/
+            
+            /*解决内边距向外的扩展的情况,则内边距向内扩展*/
+            box-sizing: border-box;
+
+            /*3.设置了内边距后，内边距的大小不会因为内容的多少而发生改变*/
+            height: 100px;
+
+            /*轮廓线*/
+            /*设置方式:跟边框类型*/
+            outline: 2px dotted blue;
+            /*特征：不会影响布局，如果位置跟其他元素有冲突，则会重叠*/
+            /*并不在布局流当中，而是浮在上面的*/
+            /*轮廓线的偏移量  正值向外偏移  负值向内偏移*/
+            outline-offset: 200px;
+            outline-offset: -50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        我是section标签我是section标签
+        我是section标签我是section标签
+        我是section标签我是section标签
+        我是section标签我是section标签
+        我是section标签我是section标签
+        我是section标签我是section标签
+    </section>
+    <span>spanspanspanspanspan</span>
+</body>
+</html>
+
+<!--
+    往往会把 像 section div 这些块级元素作为一个容器，放入一些元素
+    块级元素 上到下
+
+    
+-->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        相对定位 相对于原来位置进行偏移
+        position：relative +  left/top/right/bottom
+        特征：元素原本的位置不会被其他元素占据
+        */
+        /*>父子选择器 找的span是body的直接子元素 而不是孙子元素*/
+        body>span:nth-child(2){
+            /*位置：相对*/
+            /*指定元素的定位方式为相对定位*/
+            position: relative;
+
+            /*相对于原来的位置进行改变  距离原位置的上侧为20px*/
+            /*top: 20px;*/
+            /*bottom: 20px;*/
+            /*left: 20px;*/
+            right: 20px;
+
+            bottom: -100px;
+
+        }
+
+        div>span{
+            position: relative;
+            top: -145px;
+        }
+    </style>
+</head>
+<body>
+    <!--span{xxx}*4-->
+    <span>JS,HTML,CSS</span>
+    <span>JS,HTML,CSS</span>
+    <span>JS,HTML,CSS</span>
+    <span>JS,HTML,CSS</span>
+
+    <!--换行标签-->
+    <!--<br>-->
+
+    <!--div 块级元素-->
+    <div>
+        <img src="img/1.jpg" alt="风景图片">
+        <span>我是图片后面的说明文字</span>
+    </div>
+
+
+</body>
+</html>

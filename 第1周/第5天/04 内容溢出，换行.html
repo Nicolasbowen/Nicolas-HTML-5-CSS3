@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*
+        内容溢出：
+        元素宽高固定时，让内容较多时，
+        内容就超出了原本的范围之外
+        使用overflow属性来处理内容溢出问题
+
+        换行：
+        中文字符可以在任意两个字符之间换行
+        英文字符不会在单词内部换行，如果写一个很长的单词，就不会换行
+        
+        文本字符中的空白符处理：
+        white-space
+    */
+        section{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+
+            /*切除溢出内容  hidden(隐藏)*/
+            /*overflow: hidden;*/
+
+            /*使内容滚动来保证容器存放更多的内容
+              此时元素上会出现滚动条 scroll(滚动)*/
+            /*overflow: scroll;*/
+
+            /*auto(自动) 由浏览器自动处理溢出内容*/
+            overflow: auto;
+        }
+        div{
+            width: 200px;
+            border: 1px solid red;
+            /*中文字符可以在任意两个字符之间换行*/
+        }
+        div:nth-of-type(2){
+            /*长单词，不会自动换行 内容溢出*/
+            /*wrap(包)*/
+            /*只对长单词有效  使长单词进行强制换行 折断长单词*/
+            word-wrap: break-word;
+            /*默认值 normal(正常) 只在允许的断字点处换行*/
+            /*word-wrap: normal;*/
+
+        }
+        div:nth-of-type(3){
+            /*允许在单词内部换行*/
+            /*word-break: break-all;*/
+
+            /*可以手动调节大小*/
+            resize:both;
+            overflow: scroll;
+        }
+
+        main{
+            width: 200px;
+            border: 1px solid red;
+            /*类似pre标签，保留空格 tab 回车 换行等格式*/
+            /*保留原本的字符格式*/
+            white-space: pre;
+            /*在pre的基础 可在换行处换行*/
+            white-space: pre-wrap;
+            /*在pre-wrap的基础上 忽略了空白符*/
+            white-space: pre-line;
+            /*不换行 忽略所有的文本格式*/
+            white-space: nowrap;
+            /*默认值 按照正常的形式显示文本（忽略文本格式，在需要换行的地方换行）*/
+            white-space: normal;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        我是section 我是section 我是section我是section
+        我是section我是section我是section我是section
+        我是section我是section我是section我是section 
+        我是section 我是section 我是section我是section
+        我是section我是section我是section我是section
+        我是section我是section我是section我是section
+    </section>
+
+    <div>
+        即时消息传递正在改变人们的生活。它是一个非常有用的工具，结合了电子邮件、 Internet 电话以及文件传输应用程序的优点。用户甚至可以看到谁在线、谁的状态为“忙碌”等等。当然了，人们可以用它来长时间地进行不创造任何效益的聊天。但是，员工也可以利用它在任何时候向老板发送极为重要的信息。伴随着
+                WEB2.0 时代的到来，即时消息和 WEB 应用程序强强联手，必将掀起一股狂潮。本文就是借助一些较新 web 技术，对此的一些尝试和探索。
+    </div>
+    <div>
+        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+    </div>
+
+    <div>
+         congratulation congratulation congratulation
+        congratulation congratulation congratulation congratulatio
+    </div>
+
+    <main>
+        function method(){
+
+            console.log('Hello HTML5! Hello HTML5! Hello HTML5! ');
+
+        }
+    </main>
+</body>
+</html>

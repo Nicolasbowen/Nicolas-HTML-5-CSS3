@@ -1,0 +1,43 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: orange;
+    text-align: center;
+    padding: 5px;
+}
+header .search{
+
+    display: inline-block;
+    background-image: url(images/common/search_bg.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 65vw;
+    max-width: 369px;
+    padding-left: 1rem;
+    margin: 0 5px;
+
+    /*设置行内元素在竖直方向上的对齐方式*/
+    vertical-align: middle;
+}
+header .search input{
+    text-align: left;
+    width: calc(100% - 1rem);
+    border: none;
+    height: 5vw;
+    font-size: 0.6rem;
+    
+}
+header>img{
+    height: 5vw;
+    vertical-align: middle;
+}
+
+header>a {
+    text-decoration: none;
+    color: white;
+    font-size: 4.7vw;
+
+    vertical-align: middle;
+}

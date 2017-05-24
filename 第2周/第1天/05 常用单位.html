@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            /*font-size: 3cm;
+            font-size: 3pt;*/
+            /*font-size: 30px;*/
+        }
+        section{
+            /*相对于父元素的font-size的百分比*/
+            /*font-size: 50%;*/
+        }
+    </style>
+</head>
+<body>
+    <!--
+        常用单位
+        px cm mm pt(磅)....
+        % 相对于父元素（或者容器等。。。）的百分比
+        rem 相对单位root em 相对于html（根标签）中的字体大小
+        em 相对单位相对于父元素的百分比  
+
+        vw viewport width 视口宽度的百分比 
+        vh viewport height 视口高度的百分比
+        10vw = 视口宽度的10%
+        10vh = 视口高度的10%
+        一般用于手机页面当中
+    -->
+    <section>
+        今天是周一。。。
+    </section>
+
+    <!--rem:相对于根标签的html中设定的font-size的大小
+        如果html中没有指定大小，那么按照浏览器的默认字体大小来计算
+        火狐浏览器默认的字体大小为16px;
+    -->
+    <style>
+        html{
+            /*font-size: 40px;*/
+        }
+        body{
+            /*font-size: 40px;*/
+        }
+        section{
+            /*40px * 0.5*/
+            font-size: 0.5rem;
+        }
+        
+    </style>
+    <section>我是section
+        <div>
+            div
+            <p style="font-size: 1rem">我是p标签</p>
+        </div>
+
+    </section>
+
+    <!--em 
+        计算方式：
+        向上层父元素中font-size的尺寸大小相乘
+        如果上层父元素也是相对单位，那么就继续向上层父元素
+        的父元素中找，然后相乘，知道遇到一个固定的大小为止
+        如果到达html，而html当中并没有指定font-size，那么就按照
+        默认的16px 进行计算
+    -->
+
+    <main>
+        <p style='font-size: 1em'>我是p标签</p>
+
+    <section style="font-size: 20px">
+        <!--20px * 0.5-->
+        <p style="font-size: 0.5em">我是p标签</p>
+    </section>
+
+    <section style="font-size: 2em">
+        <!--0.5 * 2 * 16px-->
+        <p style="font-size: 0.5em">我是p标签</p>
+    </section>
+
+    </main>
+
+    <main>
+        <section style="font-size: 50%">
+            <p style="font-size: 0.5em">
+                <span style="font-size: 2em">span标签</span>
+            </p>
+        </section>
+    </main>
+
+    <!--
+        vw vh使用
+
+    -->
+    <style>
+        .test{
+            width: 20vw;
+            height: 20vw;
+            border: 1px solid red;
+        }
+    </style>
+
+    <main class="test"></main>
+</body>
+</html>

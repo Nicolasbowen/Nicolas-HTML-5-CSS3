@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        body>img{
+            width: 100%;
+            height: 100%;
+          
+            /*对图片进行模糊处理 参数为模糊度*/
+            filter: blur(30px);
+        }
+        article{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        header{
+            /*固定值*/
+            /*font-size: 25px;*/
+            /*相对值 相对于html中font-size的大小*/
+            /*font-size: 0.5rem;*/
+            /*相对值 相对于视口的宽度*/
+            font-size: 7vw;
+            text-align: center;
+            color:white;
+
+        }
+        header>span{
+            font-size: 0.8em;
+            padding-top: 1.4vw;
+        }
+        header>span:first-of-type{
+            float: left;
+        }
+        header>span:last-of-type{
+            float: right;
+        }
+        /*头像部分*/
+        .avatar{
+            width: 30vw;
+            height: 30vw;
+            border-radius: 50%;
+            background-image: url(img/img.jpg);
+            background-size: 150% auto;
+            background-position: center;
+            margin: 20px auto;
+        }
+        /*form....*/
+        form{
+            width: 80vw;
+            margin: 0 auto;
+            color: white;
+            
+        }
+        form>div:nth-of-type(-n+2){
+            border-bottom: 1px solid white;
+            margin-bottom: 4vh; 
+        }
+        input[type="text"],input[type="password"]{
+            border: none;
+            /*将背景设置为透明*/
+            background: transparent;
+        }
+        form>div:nth-of-type(3){
+            text-align: center;
+            margin-top: 8vh;
+        }
+        input[type='button']{
+            border: none;
+            background-color: green;
+            width: 60vw;
+            height: 10vw;
+            font-size: 6vw;
+            color: white;  
+            border-radius: 5px; 
+        }
+        input[type='button']+span{
+            display: block; 
+            font-size: 15px;
+
+        }
+        footer{
+            margin-top: 10vh;
+        }
+        footer>form img{
+            width: 15vw;
+        }
+        footer fieldset{
+            border: none;
+            border-top: 1px solid white;
+            text-align: center;
+        }
+        footer img:first-of-type{
+            float: left;
+        }
+        footer img:last-of-type{
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--ctl+shift + M 切换到手机端模式-->
+    <img src="img/bg.jpg" alt="">
+    <article>
+        <header>
+            <span>返回</span>
+            登录
+            <span>注册</span>
+        </header>
+        <main>
+            <!--<img src="" alt="" class="avatar">-->
+            <section class="avatar"></section>
+            <!--表单标签 通常会表示一些让用户输入信息的控件-->
+            <form action="">
+                <!--表单当中的控件-->
+                <!--input标签 type:text 文本输入框控件-->
+                <!--placeholder占位符 提供用户输入框中应该要输入的内容-->
+                <!--value属性表示输入框中的内容值-->
+                <div>
+                    <label for="">用户姓名:</label>
+                    <input type="text" placeholder="请输入用户名" value="白白">
+                </div>
+                <div>
+                    <label for="">密&ensp;码&ensp;号:</label>
+                    <!--input[type='password'] 密码输入框-->
+                    <input type="password" placeholder="请输入密码">
+                </div>
+
+                <div>
+                    <input type="button" value="登录">
+                    <span>忘记密码？</span>
+                </div>
+
+
+            </form>
+        </main>
+
+        <footer>
+            <form action="">
+                <!--field（领域） set（集合）-->
+                <fieldset>
+                    <!--legend表示区域标题  align（对齐方式）-->
+                    <legend align='center'>其他登录方式</legend>
+                    <img src="img/qq.png" alt="">
+                    <img src="img/weibo.png" alt="">
+                    <img src="img/weixin.png" alt="">
+                </fieldset>
+            </form>
+
+
+        </footer>
+
+    </article>
+</body>
+</html>

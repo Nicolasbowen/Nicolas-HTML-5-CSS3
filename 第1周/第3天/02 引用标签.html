@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        cite{
+            /*font-style: italic*/
+            /*设置字体样式为正常体*/
+            font-style: normal;
+        }
+        cite::before{
+            content: "《";
+        }
+        cite::after{
+            content: "》";
+        }
+        .quote{
+            /*更改默认的引用样式*/
+            /*quotes:'(' ')';*/
+            /*特殊字符 可以借助搜狗输入法来输入*/
+            quotes: '«' '»';
+        }
+        .quote2{
+            quotes: '{' '}' '[' ']';
+        }
+    </style>
+</head>
+<body>
+    <!--q引用标签-->
+    <!--
+        q标签 引用一句话   
+        cite表示引用作品名 如：书籍名，书画名等
+        blockquote 块引用 段引用 引用段落 会自动添加外边距
+    -->
+    <q>知之为知之，不知为不知，是知也！</q>
+    <br>
+    <br>
+    <q>我是听孔子说，<q>知之为知之，不知为不知，是知也！</q>，我很受益</q>
+
+    <br>
+
+    <q>知之为知之，不知为不知，是知也！</q>，这句话来自<cite>论语</cite>
+
+    <div>
+        <q class="quote">知之为知之，不知为不知，是知也！</q><br>
+        <q class="quote2">我是听孔子说，<q>知之为知之，不知为不知，是知也！</q>，我很受益</q>
+    </div>
+
+    Here comes a quotation：
+    <blockquote>
+        this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.this is a long quotation.
+    </blockquote>
+
+</body>
+</html>

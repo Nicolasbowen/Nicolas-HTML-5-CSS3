@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="baishuang">
+        <title></title>
+        <style>
+            html{
+                height: 100%;
+            }
+            body{
+                height: 100%;
+                margin: 0;
+            }
+            main{
+                width: 600px;
+                /*height: 700px;*/
+                background: url(img/wood.png);
+                margin: 0 auto;
+                padding-bottom: 70px;
+                
+            }
+            main>section{
+                width: 400px;
+                height: 90px;
+                border: 1px solid red;
+                box-sizing: border-box;
+
+                margin: 0 auto;
+
+                position: relative;
+
+                border-radius: 10px;
+
+            }
+            main>section:nth-of-type(2n+1){
+                
+                left: -40px;
+            }
+            /*在nth-of-type中可以使用表达式 n从0开始 如：2n 2n+1 -n+3*/
+            main>section:nth-of-type(2n){
+               left: 40px;
+            }
+            main>section:nth-of-type(8){
+                z-index: 10;
+
+                background-color: #c1c1c1;
+                overflow: hidden;
+            }
+            main>section:nth-of-type(8) div:first-of-type{
+                position: absolute;
+                left: 10px;
+                top: -10px;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                opacity: 0.5;
+                z-index: 10;
+                
+            }
+            main>section:nth-of-type(8) div:last-of-type{
+                position: absolute;
+                left: 170px;
+                top: -75px;
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+                background-color: blue;
+
+                opacity: 0.5;
+                
+            }
+            main>section:nth-of-type(7){
+                top: 10px;
+                z-index: 11;
+            }
+            main>section:nth-of-type(6){
+                top: 20px;
+                z-index: 12;
+            }
+            main>section:nth-of-type(5){
+                top: 30px;
+                z-index: 13;
+            }
+            main>section:nth-of-type(4){
+                top: 40px;
+                z-index: 14;
+            }
+            main>section:nth-of-type(3){
+                top: 50px;
+                z-index: 15;
+            }
+            main>section:nth-of-type(2){
+                top: 60px;
+                z-index: 16;
+            }
+            main>section:nth-of-type(1){
+                top: 70px;
+                z-index: 17;
+                background-image: url(img/diwen.png);
+                background-size: 100% 100%;
+                background-position: center;
+
+                color: white;
+                /*十六进制表示颜色*/
+                background-color: #1f1a17;
+            }
+            h1,p,h2{
+                margin: 0;
+            }
+            h1{
+                font-family: 迷你简双线体;
+                font-size: 40px;
+      
+                position: absolute;
+                top: 0;
+                right: 20px;
+            }
+            address{
+                font-style: normal;
+                position: absolute;
+                left: 30px;
+                top: 20px;
+                text-align: center;
+                font-size: 30px;
+            }
+            address p{
+                color: #5e72a7;
+            }
+            address small{
+                position: relative;
+                top: -20px;
+            }
+            .hool{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: url(img/wood.png);
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>简历</h1>
+                <address>
+                    <p>小婷</p>
+                    <small>xiaoting</small>
+                    
+                </address>
+                <span class="hool"></span>
+            </section>
+            <section>
+                <h2>个人信息</h2>
+                <span class="hool"></span>
+            </section>
+            <section>
+                <h2>联系方式</h2>
+                <span class="hool"></span>
+            </section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+
+        </main>
+    </body>
+</html>

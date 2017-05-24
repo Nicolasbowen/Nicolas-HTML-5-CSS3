@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+        }
+        div:nth-of-type(1){
+            /*浮动到左边*/
+            float: left;
+        }
+        div:nth-of-type(2){
+            /*浮动到右边*/
+            float: left;
+        }
+        /*
+        浮动后，
+        元素宽度不再占用整行宽度，而是内容的宽度
+        元素的位置被占据
+        元素脱离原本的布局流
+
+        固定定位，绝对定位，浮动 后 元素都要脱离布局流
+        */
+        div:nth-of-type(3){
+            border: 2px solid blue;
+            background-color: grey;
+        }
+        /*
+        浮动后，需要清除浮动（消除浮动后，位置因被占据，而出现元素相互遮挡问题）
+        */
+        div:nth-of-type(3){
+            /*清除左右两边浮动*/
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--div{第$$$个div}*2-->
+    <div>第00001个div</div>
+    <div>第00002个div</div>
+    <div>我是第333333个div</div>
+</body>
+</html>

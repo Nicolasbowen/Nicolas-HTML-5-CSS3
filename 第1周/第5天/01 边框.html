@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+            /*border 边框*/
+            /*复合属性*/
+            /*第一个值表示边框的宽度 第二个值表示边框的类型 第三个表示边框的颜色*/
+            border: 10px solid blue;
+            /*三个顺序没有一定的要求*/
+            /*border: solid 20px blue;*/
+            /*边框-宽度*/
+            /*复合样式*/
+            border-width: 20px;
+            border-style: double;
+            border-color: red;
+
+            /*border: none;*/
+            /*复合样式*/
+            border-left: 2px dotted green;
+            /*border-right: */
+            /*border-top: */
+            /*border-bottom: */
+
+
+            /*
+            当设置元素的边框时，会加大元素本身的大小
+            元素显示的大小= width/height + border
+
+            加边框和添加内边距，都会使元素变大
+            */
+            /*解决元素添加完边框和内边距变大的问题*/
+            box-sizing: border-box;
+
+
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+</body>
+</html>

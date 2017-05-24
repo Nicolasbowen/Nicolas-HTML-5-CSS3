@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            /*选中所有标签*/
+        }
+        p{
+            /*标签选择器*/
+        }
+        /*.class #id */
+        p,span{
+            /*并集选择器*/
+        }
+        /*+表示下一个相邻同胞选择器*/
+        /*~表示下一些同胞选择器*/
+        p+section{
+            color: red;
+        }
+        p~section{
+            color: yellow;
+        }
+        /*> 父子选择器*/
+        /*空格 子孙选择器*/
+
+
+        header>*:nth-of-type(2){
+            /*color: blue;*/
+        }
+        header>*:nth-child(2){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>pppp</p>
+    <section>section</section>
+    <section>section222222</section>
+    <main>main.....</main>
+    <section>section33333</section>
+
+    <header>
+        <span>header中的span</span>
+        <div>div001</div>
+         <span>header中的span333</span>
+
+        <div>div002</div>
+        <div>div003</div>
+        <div>div004</div>
+        <div>div005</div>
+        <div>div006</div>
+    </header>
+</body>
+</html>

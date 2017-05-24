@@ -1,0 +1,101 @@
+/****************变量**********************/
+p {
+  text-align: center;
+  color: red;
+}
+section {
+  color: red;
+}
+p {
+  font-size: 10px;
+}
+p:after {
+  content: "sskfjasfdjasfkasfjij";
+}
+/*******************混合************************/
+.border,
+main {
+  border-top: 1px solid red;
+  border-bottom: 2px solid blue;
+}
+#style {
+  font-style: italic;
+}
+p {
+  border-top: 1px solid red;
+  border-bottom: 2px solid blue;
+  font-style: italic;
+}
+section {
+  border-top: 1px solid red;
+  border-bottom: 2px solid blue;
+  font-style: italic;
+}
+.underline {
+  color: orange;
+}
+.underline:hover {
+  text-decoration: underline;
+}
+div {
+  color: orange;
+}
+div:hover {
+  text-decoration: underline;
+}
+div {
+  border-left: 5px solid red;
+  border-right: 5px double blue;
+  border-radius: 5px;
+}
+p {
+  border-left: 10px solid red;
+  border-right: 10px double blue;
+  border-radius: 20px;
+}
+div {
+  box-shadow: 10px 20px 10px red;
+}
+/***************嵌套*******************/
+header {
+  background-color: red;
+}
+header h1 {
+  text-align: center;
+}
+header address {
+  color: yellow;
+}
+header address strong {
+  font-style: normal;
+}
+header address strong:before {
+  content: "作者：";
+}
+header address span {
+  border-bottom: 1px dotted gray;
+}
+/****************扩展********************/
+main {
+  margin: 30px auto;
+  height: 300px;
+}
+.test,
+main {
+  color: red;
+}
+main {
+  font-size: 40px;
+}
+/************函数*************/
+main {
+  color: red;
+  color: #FF0;
+  color: #ffff00;
+  color: #ff0000;
+  background-image: url(1.jpg);
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 281px;
+  border: 24px solid red;
+}

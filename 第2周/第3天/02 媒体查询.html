@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="baishuang">
+        <title></title>
+        <style>
+            body{
+                /*background-color: red;*/
+            }
+            /**/
+            @media screen and (max-width:300px){
+                /*这段css代码在screen屏幕下，而且最大宽度为300px时生效*/
+                /*屏幕的宽度小于等于300px的样式*/
+                body{
+                    /*background-color: blue;*/
+                }
+            }
+
+            @media screen and (min-width:400px){
+                /*屏幕尺寸大于等于400px*/
+                body{
+                    /*background-color: yellow;*/
+                }
+            }
+
+            body{
+                background-color: blue;
+            }
+            /*横屏和竖屏模式*/
+            /*横屏 宽>高  竖屏 高>宽*/
+            /*@media screen and (max-aspect-ratio:1/1){*/
+            /*screen and 可以省略*/
+            @media (max-aspect-ratio:1/1){
+                /*竖屏*/
+                body{
+                    background-color: red;
+                }
+            }
+
+            
+
+            
+        </style>
+    </head>
+    <body>
+        <!--
+            媒体查询：
+            1）根据不同的屏幕类型设置不同的样式
+            2）根据不同的屏幕尺寸设置不同的样式
+            媒体类型:
+            screen(电脑，平板 ，手机等屏幕设备)
+            媒体功能（查询的条件）:
+            max-width:
+            min-width:
+            max-height:
+            min-height:
+            max-aspect-ratio:最大宽高比
+            min-aspect-ratio：最小宽高比
+
+        -->
+
+        
+        
+    </body>
+</html>

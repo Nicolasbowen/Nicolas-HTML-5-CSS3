@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="bais">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-header>a {
+            padding: 0 10px;
+        }
+        
+        .container-fluid {
+            background-image: url(img/nav-bg.png);
+            background-repeat: repeat-x;
+        }
+        
+        .navbar-default .navbar-nav > li > a {
+            padding: 0;
+            padding-bottom: 13px;
+        }
+        
+        .navbar-default .navbar-nav > li {
+            padding: 15px 15px 0 15px;
+        }
+        
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover {
+            background-color: transparent;
+            color: blue;
+            border-bottom: 2px solid blue;
+        }
+        
+        .navbar-default .navbar-nav > li > a:hover {
+            color: blue;
+            border-bottom: 2px solid blue;
+        }
+
+        .form-control{
+            border-radius: 17px;
+        }
+
+        .form-group{
+            position: relative;
+        }
+        .form-group>input+span{
+            position: absolute;
+            right: 5px;
+            top: 4px;
+            color: white;
+            font-size: 17px;
+            background-color: blue;
+            border-radius: 50%;
+            padding: 5px;
+            
+
+        }
+
+        /************图片横幅************/
+        body{
+            padding-top: 50px;
+        }
+        body>.container-fluid{
+            padding:0;
+        }
+        body>.container-fluid img{
+            width: 100%;
+
+        }
+
+        /************珊格内容部分*************/
+        .mainBorder{
+            border: 1px solid gray;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }
+        #main>.row>div{
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: -29.8px;
+        }
+
+        #main>.row>div>.inner>h2{
+            margin: 0;
+            font-size: 18px;
+            font-style: normal;
+            color: white;
+            padding: 5px;
+        }
+        #main>.row>div:nth-of-type(2n+1)>.inner h2{
+            background-color: blue;
+        }
+        #main>.row>div:nth-of-type(2n)>.inner h2{
+            background-color: black;
+        }
+
+        @media (max-width:768px){
+            #main>.row>div:nth-of-type(n+2){
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!--
+    导航
+-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">媒体中心</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">业务板块</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+<!--
+    图片横幅
+-->
+    <div class="container-fluid">
+        <img src="img/banner.jpg" alt="">
+    </div>
+
+    <!--
+        珊格内容
+    -->
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 ">
+                <div class="inner mainBorder">
+                    <h2>公司动态</h2>
+                    <div>
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                 <div class="inner mainBorder">
+                    <h2>公司动态</h2>
+                    <div>
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                 <div class="inner mainBorder">
+                    <h2>公司动态</h2>
+                    <div>
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                        公司动态。。 公司动态。。 公司动态。。 公司动态。。 公司动态。。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        section{
+            border: 1px solid red;
+            width: 600px;
+            height: 600px;
+            margin: 40px auto;
+            /*把元素范围设置为3D场景*/
+            transform-style: preserve-3d;
+            /*设置观察者的远近位置*/
+            perspective: 900px;
+            /*设置观察者的角度*/
+            perspective-origin: center center;
+
+
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+            background-image: url(img/img.jpg);
+            background-size: cover;
+
+            /*3d位移*/
+            /*
+            translateX()在x轴上的平移
+            translateY()在y轴上的平移
+            translateZ()在z轴上的平移
+            translate3d()分别在x轴，y轴，z轴上的平移
+            */
+            transform: translateX(40px);
+            transform: translateY(30px);
+            transform: translateZ(40px);
+            transform: translate3d(10px,20px,30px);
+
+            /*3d旋转*/
+            /*绕x轴旋转 正值向内转 负值向外转*/
+            transform: rotateX(30deg);
+            /*绕y轴旋转 正值向右，负值向左*/
+            transform: rotateY(30deg);
+            /*绕z轴旋转 正值为顺时针 负值为逆时针*/
+            transform: rotateZ(30deg);
+            /*第一个值表示x轴上是否旋转0表示不旋转1表示旋转
+            第二个值表示y轴上是否旋转
+            第三个表示z轴上是否旋转
+            第四个值表示旋转的度数*/
+            transform: rotate3d(1,1,1,30deg);
+
+            /*3d缩放*/
+            /*单独使用没有效果，需要结合旋转角度组合使用*/
+            transform: scale3d(0.5,0.5,0.5) rotate3d(1,1,1,40deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>

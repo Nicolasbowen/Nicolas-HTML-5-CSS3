@@ -1,0 +1,26 @@
+.icon{
+    border: 1px solid red;
+    /*行内元素 不能通过width，height样式指定宽高*/
+    background-image: url(img/icons.jpg);
+    width: 100px;
+    height: 100px;
+    /*转变为行内块元素  行内块元素的特征：既可以横向排列，又可以指定宽高*/
+    display: inline-block;
+    
+    /*元素的大小总是背景图的七分之一*/
+    background-size: 700% 700%;
+
+}
+.r1c1{
+
+}
+.r1c2{
+    /*第一行 第二个*/
+    background-position: -100px 0;
+}
+.r1c3{
+    background-position: -200px 0;
+}
+.r3c3{
+    background-position: -200px -200px;
+}

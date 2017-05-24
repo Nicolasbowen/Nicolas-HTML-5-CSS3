@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        .cankao{
+            background-color: red;
+        }
+        .bianhuan{
+            background-color: blue;
+            opacity: 0.9;
+        }
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        .bianhuan{
+            /*2D变换*/
+            /*transform（变换）translate(移动)*/
+            /*平移*/
+            /*translate() css的方法、函数 ()里是方法的参数*/
+            /*方法（函数）：功能块,可以实现某些指定的功能 
+            参数：实现功能时，需要的数据指令
+            */
+            /*参数 表示水平方向上的平移，正值向右，负值向左*/
+            transform: translate(30px);
+            /*第一个表示水平方向上的平移
+            第二个值表示竖直方向上的平移（正值向下，负值向上）
+            */
+            transform: translate(10px,-30px);
+
+            /*缩放  scale(比例，缩放)*/
+            /*第一个值表示水平方向上的缩放倍数（比例）*/
+            transform: scale(0.4);
+            /*第一个值表示水平方向上的缩放倍数
+            第二个值表示竖直方向上的缩放倍数*/
+            transform: scale(1,2);
+
+            /*旋转  rotate(旋转)*/
+            /*deg 表示单位度数*/
+            /*正值顺时针 旋转 负值逆时针旋转*/
+            transform: rotate(30deg);
+
+            /*倾斜*/
+            /*表示水平方向上的倾斜 正值向左倾斜，负值向右倾斜*/
+            transform: skew(30deg);
+            /*第一个值表示水平方向上的倾斜*/
+            /*第二个值表示竖直方向上的倾斜 正值向上倾斜，负值向下倾斜*/
+            transform: skew(23deg,40deg);
+
+
+            /*组合变换*/
+            /*先平移 后缩放 再旋转*/
+            transform: translate(30px) scale(2) rotate(30deg);
+        }
+
+        .bianhuan{
+            transform: rotate(30deg);
+            /*origin(原点)*/
+            /*变换原点  在元素原本位置上的一个坐标点*/
+            /*默认值*/
+            transform-origin: center center;
+            transform-origin: 0 0 ;
+            transform-origin: 100px 100px;
+            /*百分比 相对于元素大小的百分比*/
+            transform-origin: 50% bottom;
+            transform-origin: left bottom;
+
+            /*
+            px % 
+            left(0%) center(50%) right(100%)(水平方向上的三个位置)
+            top(0%) center(50%) bottom(100%)（竖直方向上的三个位置）
+            */
+            /*如果省略第二个值，那么第二个值就是center*/
+            transform-origin: left;
+        }
+
+    </style>
+</head>
+<body>
+     <!--section+section>div-->
+     <section class="cankao"></section>
+     <section class="bianhuan">
+         <div></div>
+     </section> 
+</body>
+</html>

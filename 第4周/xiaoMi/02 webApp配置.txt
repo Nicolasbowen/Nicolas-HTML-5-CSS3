@@ -1,0 +1,16 @@
+﻿<!--webApp设置-->
+    <!--默认 应用中会跟浏览器中的形式一致，上面有地址栏，底部有工具栏 下面设置可以全屏-->
+    <!--设置web应用是否以全屏模式运行-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--默认应用可以缩放很大尺寸，下面可以设置-->
+    <!--viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--应用图标-->
+    <link rel="apple-touch-icon" sizes="57x57" href="icon57.png" />  
+    <link rel="apple-touch-icon" sizes="72x72" href="icon72.png" />  
+    <link rel="apple-touch-icon" sizes="114x114" href="icon114.png" />    
+
+    <!--设置web应用的标题-->
+    <meta name="apple-mobile-web-app-title" content="天气预报">

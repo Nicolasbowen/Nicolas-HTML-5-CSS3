@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!---->
+    <link rel="stylesheet" href="../css/common.css">
+    <!---->
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../navSpirit.css">
+</head>
+<body>
+    <!--
+        绝对路径（相对磁盘的路径）通常不使用
+        相对路径 （相对于当前文件的路径）
+    -->
+    <!--绝对路径-->
+    <!--<img src="file://C:/Users/BaiShuang/Desktop/课堂使用/lry.jpg" alt="">-->
+    
+    <!--相对路径-->
+    <!--目标文件在同级或者下级-->
+    <!--跟本文件在同一目录下，文件名为就为文件的路径-->
+    <!--<img src="lry.jpg" alt="">
+    <img src="test/leaf.jpg" alt="">-->
+    <!--.表示同级当中找-->
+    <!--<img src="./lry.jpg" alt="">-->
+    <!--<img src="./test/leaf.jpg" alt="">-->
+
+    <!--目标文件在上上级-->
+    <!--..表示当前文件的上级-->
+    <!--<img src="../images/common/spr1.png" alt="">-->
+    <!--<img src="../../" alt="">-->
+    <nav>
+        <ul>
+            <li class="">
+                <a href="../index.html">
+                    <div class="sp home"></div>
+                    <span>首页</span>
+                </a>
+
+            </li>
+            <li class="active">
+                <a href="">
+                    <div class="sp classifySelected"></div>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="sp shop"></div>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="sp my"></div>
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

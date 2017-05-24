@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*:before 前面 :after 后面  content内容*/
+        /*伪元素选择器*/
+        div::before{
+            /*选中div标签的 前面，可以在div的前面加内容*/
+            content: "前面";
+            /*对点缀进行样式的设置*/
+            color: red;
+            /*设置字体类型为斜体*/
+            font-style: italic;
+
+        }
+        div::after{
+            /*内容中的标签对不会被识别，会被当做一个普通的字符来显示*/
+            content: "<b>我是后面的点缀</b>";
+            font-size: 30px;
+        }
+        /*
+        通过before after 这些伪元素选择器 可以对元素进行点缀
+        也可以通过样式对这些点缀进行美化
+
+        before，after 也可以通过添加一些标签（元素）来实现相同的效果
+        所以叫做伪元素选择器
+
+        使用伪元素选择器的好处
+        1.点缀部分并不是内容，如果直接写会污染内容，导致百度搜索等
+        提取网页内容受到干扰
+        2.有时，HTML标签和内容是服务器端程序生成的，通过这种技术可以向标签
+        中注入新的内容
+        3.写法简单，可以使用样式控制
+        */
+
+    </style>
+</head>
+<body>
+    <div>我是内容，是需要进行点缀，但是点缀并不是我的内容</div>
+</body>
+</html>

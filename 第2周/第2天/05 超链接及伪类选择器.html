@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*设置未被访问时的样式*/
+        a:link{
+            color: yellow;
+        }
+        /*设置已经被访问过的链接的样式*/
+        a:visited{
+            color: red;
+        }
+        /*当鼠标放置在元素上时的样式*/
+        a:hover{
+            color: purple;
+        }
+        /*当点击元素时的样式 按下标签*/
+        a:active{
+            color: black;
+        }
+        /*获取焦点时的样式，此样式会覆盖active的样式*/
+        /*获取焦点：对超链接来说，就是点击超链接
+                   对于输入框来说，点击输入框，将光标置于输入内
+        */
+        a:focus{
+            color: pink;
+        }
+
+        /*
+        :hover需要放置在:link 和:visited 之后，：active之前
+        :link :visited :hover :active :focus
+        */
+
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度一下，你就知道</a>
+    <a href="http://www.tmall.com">进入天猫</a>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*
+    元素可以自动继承父元素的某些样式，
+    继承并应用在自己身上的前提：自身没有
+
+    哪些样式可以自动的继承：
+    color 。。。。
+
+    */
+        section{
+            /*可以被自动继承的*/
+            color: red;
+            text-align: center;
+            font-size: 50px;
+            font-family: 宋体;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+
+
+            /*不能被自动继承的*/
+            border: 1px solid red;
+            margin: 20px auto;
+
+            background-color: black;
+
+            /*一般
+            跟文本相关的一些属性都可以被自动继承
+            跟盒模型相关的样式都不能被自动继承
+            */
+        }
+
+        p{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+
+        <p>我是p标签</p>
+    </section>
+</body>
+</html>
+
+<style>
+    main{
+        width: 200px;
+        height: 200px;
+        border: 20px solid black;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        /*border: 1px solid black;*/
+        /*不能通过自动继承的属性，可以通过inherit这个属性值来继承
+          前提：这个属性border含有inherit这个属性值
+        */
+        border: inherit;
+    }
+</style>
+
+<main>
+    <div></div>
+</main>

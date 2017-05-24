@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            transform-style: preserve-3d;
+            perspective: 900px;
+            perspective-origin: 30% 80%;
+            background-color: black;
+
+            
+
+        }
+        section{
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            left: calc((100% - 300px) / 2 );
+            top: 80px;
+            /*想要section在竖直方向上转动，且转动点在左侧，
+              那么需要变换原点至少在x z方向上为0
+            */
+            transform-origin: 0 0 0;
+            
+        }
+        section:last-of-type{
+            transform: rotateY(-60deg);
+            
+        }
+        section:nth-of-type(4){
+            transform: rotateY(-50deg);
+        }
+        section:nth-of-type(3){
+            transform: rotateY(-40deg);
+        }
+        section:nth-of-type(2){
+            transform: rotateY(-30deg);
+        }
+        section:nth-of-type(1){
+            transform: rotateY(-20deg);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <section style="background-color:red;"></section>
+    <section style="background-color:yellow;"></section>
+    <section style="background-color:blue;"></section>
+    <section style="background-color:green;"></section>
+    <section style="background-color:deeppink;"></section>
+</body>
+</html>

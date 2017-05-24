@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html*/
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+            /*设置body作为弹性布局的容器*/
+            /*对容器当中的元素进行布局*/
+            display: flex;
+
+            /*
+            主轴 （项目的排列顺序）默认在水平方向从左到右
+            交叉轴 与主轴垂直的轴
+            */
+            /*direction（方向）*/
+            /*设置主轴的方向*/
+            /*默认值 水平方向从左到右*/
+            flex-direction: row;
+            /*reverse(相反的)*/
+            /*主轴方向为水平从右到左*/
+            /*flex-direction: row-reverse;*/
+            /*主轴方向竖直从上到下*/
+            /*flex-direction: column;*/
+            /*主轴方向竖直从下到上*/
+            /*flex-direction: column-reverse;*/
+        }
+        section{
+            border: 1px solid red;
+            /*项目在主轴上的尺寸 main size*/
+            /*主轴为水平方向则表示宽 主轴为竖直方向则表示高*/
+            flex-basis: 200px;
+            height: 100px;
+        }
+        /*order 表示项目在容器的中的顺序
+          默认值为0 支持负值 ，值越大，越靠后，值越小，越靠前（相对于起点位置）
+        */
+        section:nth-of-type(1){
+            order: -1;
+        }
+        section:nth-of-type(2){
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <section>我是项目0001</section>
+    <section>我是项目0002</section>
+    <section>我是项目0003</section>
+    <section>我是项目0004</section>
+</body>
+</html>

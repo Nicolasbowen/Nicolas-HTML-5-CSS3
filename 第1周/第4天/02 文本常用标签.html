@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .strong{
+            /*相当 700*/
+            font-weight: bold;
+        }
+        strong,b{
+            /*相当于 400*/
+            font-weight: normal;
+        }
+        .em{
+            /*设置字体为斜体*/
+            font-style: italic;
+        }
+        em,i{
+            /*取消斜体  正常体*/
+            font-style: normal;
+        }
+        .ins{
+            text-decoration: underline;
+        }
+        ins,u{
+            text-decoration: none;
+        }
+        .del{
+            /*装饰线  横穿线*/
+            text-decoration: line-through;
+        }
+        del,s{
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    <!--普通文本标签-->
+    <span>普通的文本标签，没有特殊的效果，表示一般的内容</span>
+    <!--加粗文本-->
+    <strong>加粗文本，strong表亲带有很强的强调含义。用于识别重要内容</strong>
+    <b>加粗文本，也有强调的含义，但是比strong稍弱</b>
+    
+    <span class="strong">我是span，我也可以加粗显示</span>
+
+    <!--斜体文本-->
+    <em>斜体文本，带有很强的强调含义，用于识别重要内容</em>
+    <i>斜体文本，也带有强调含义，比em稍弱</i>
+
+    <span class="em">我是斜体的span</span>
+
+    <!--下划线文本-->
+    <ins>下划线文本，insert 带有插入含义 表示是新增的内容</ins>
+    <u>下划线文本 u标签没有任何特殊的含义，只是增加下划线效果</u>
+
+    <span class="ins">我是加了下划线的span</span>
+
+    <!--删除线文本-->
+    <del>删除文本 delete 带有删除含义，表示已经废除掉的内容</del>
+    <s>删除文本 也有删除的含义，但是含义比del的稍弱</s>
+
+    <span class="del">我是加删除的span</span>
+
+    <!--字号文本-->
+    <small>小字号文本</small>
+    <big>大字号文本</big>
+
+    正常文本<sup>上标文字</sup>
+    正常文本<sub>下标文字</sub>
+    
+</body>
+</html>

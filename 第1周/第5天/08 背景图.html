@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+                /*相对于这个元素的父元素的宽度的百分比*/
+                /*width: 100%;*/
+                /* 相对于这格元素的父元素的高度的百分比*/
+                /*height: 100%;*/
+
+            color: white;
+            width: 800px;
+            height: 600px;
+            border: 1px solid red;
+            /*设置容器的背景图片 url背景图片的路径
+               当背景图片较大时，背景图会超出，超出部分会被剪切
+               当背景图较小时，会平铺 铺满整个容器范围
+            */
+            /*（相对路径）*/
+            background-image:url(img/bg.png); 
+
+            /*repeat（重复）*/
+            /*背景图片重复特性*/
+            /*默认重复的*/
+            background-repeat: repeat; 
+            /*背景图不重复（不平铺）*/
+            background-repeat: no-repeat;
+            /*背景图在x方向上进行平铺*/
+            /*background-repeat: repeat-x;*/
+            /*背景图在y方向上平铺*/
+            /*background-repeat: repeat-y;*/
+
+            /*背景图的尺寸*/
+            /*第一个值表示背景图的宽度 第二个值表示背景图高度*/
+            /*使用绝对单位px cm等*/
+            background-size: 800px 500px;
+            /*百分比是相对于容器的百分比*/
+            background-size: 100% 500px;
+            background-size: 100% 100%;
+            /*auto就是由浏览器来计算值*/
+            background-size: 100% auto;
+            /*可以使用一个值，这个值表示水平方向上的尺寸 ，
+            第二个省略的值就是auto*/
+            background-size: 100%;
+            background-size: auto 100%;
+            /*
+            contain(包含) 使背景图完全的放入容器中，且使背景图
+            尽可能的等比例拉伸，可能会导致宽度或高度上有一方不能
+            完全的占满容器（两一个方向是绝对占满的） 
+            容器有留白。
+            */
+            background-size: contain;
+            /*
+            cover(覆盖)使背景等比例的缩放以完全覆盖整个容器，
+            那么背景图的宽度或者高度有一个跟容器的宽度或者高度一致，
+            而另一个可能要超出容器之外。
+            容器没有留白。
+            */
+            background-size: cover;
+
+            
+            background-size: auto auto;
+            /*背景图的位置*/
+            /*坐标值  背景图的坐上角相对容器的坐标值*/
+            /*第一个值表示水平方向上的值 第二个值表示竖直方向的值 （支持负值）*/
+            /*默认值*/
+            background-position: 0 0;
+            background-position: 12px -20px;
+            /*可以使用百分比赋值*/
+            /*整个背景图相对于容器的位置
+            0% 左(left) 上(top) 
+            100% 右(right) 下(bottom) 
+            50% (center)中间*/
+            background-position: 50% 50%;
+            background-position: left top;/*0% 0%*/
+            background-position: center center;
+            /*第二个省略的值是50% 或 center*/
+            background-position: left;
+            background-position: left center;
+
+            
+
+
+        }
+    </style>
+</head>
+<body>
+    <!--容器标签 div section 块级元素-->
+    <div>
+        我是div我是div我是div我是div我是div我是div
+    </div>
+</body>
+</html>

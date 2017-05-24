@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 100px;
+            top: 20px;
+
+            /*clip属性适用于绝对定位的元素*/
+            clip: rect(10px,290px,290px,10px);
+            /*第一个值表示上方截掉的范围
+              第二个值表示从左向右保留的范围 到右侧保留的范围（宽度-右侧要截掉的值）
+              第三个值表示从上到下保留的范围 到下侧保留的范围（高度-下侧要截掉的值）
+              第四个值表示左侧截掉的范围
+            */
+            clip: rect(0px,300px,150px,0px);
+
+        }
+    </style>
+
+</head>
+<body>
+    <section></section>
+</body>
+</html>

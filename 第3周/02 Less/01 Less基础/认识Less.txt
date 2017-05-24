@@ -1,0 +1,15 @@
+Less 是 CSS的扩展 增加了变量 混合 函数  嵌套 运算 等等功能
+如何使用less
+方式1.使用编辑工具通过less文件生成css文件
+1)下载node.js 安装 (node.js 官网 下载第二个)
+2)cmd 在命令行工具中使用npm install -g less 命令安装编译工具
+3)在命令行工具中，进入less文件所在文件夹  
+    a.cd 文件夹路径 回车
+    b.lessc less文件名 要生成的css文件的名字 回车
+4)最终在html当中引入css文件
+
+方式2.直接在html当中引入less文件
+1) 下载less.js 
+2) <link rel="stylesheet/less" href="less文件路径">
+   <script src = "less.js"></script>
+
